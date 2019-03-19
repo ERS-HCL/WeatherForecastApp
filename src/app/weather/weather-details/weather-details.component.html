@@ -1,0 +1,29 @@
+<div>
+  <h2>{{weather.name}}, {{weather.sys.country | uppercase}}</h2>
+  <h3>
+    <img src="{{ srcImg }}{{weather.weather[0].icon}}.png" width="50" height="45">&nbsp;{{ weather.main.temp}}&deg;C
+  </h3>
+  <h4>{{weather.weather[0].description | camelCase}}&nbsp;&nbsp;{{today | date:'shortTime' }}</h4>
+  <table class="table table-bordered table-hover table-striped">
+    <tbody>
+      <tr><td>Wind</td><td>{{weather.wind.speed}} m/s</td></tr>
+    <tr><td>Cloudiness</td><td>{{weather.clouds.all | cloudiness | camelCase }}</td></tr>
+    <tr><td>Pressure</td><td>{{weather.main.pressure}} hPa</td></tr>
+    <tr><td>Humidity</td><td>{{weather.main.humidity}}%</td></tr>
+    <tr><td>Temperature Min</td><td>{{weather.main.temp_min}}&deg;C</td></tr>
+    <tr><td>Temperature Max</td><td>{{weather.main.temp_max}}&deg;C</td></tr>
+    <tr><td>Sunrise</td><td>{{weather.sys.sunrise * 1000 | date:'h:mm'}}</td></tr>
+    <tr><td>Sunset</td><td>{{weather.sys.sunset * 1000 | date:'h:mm'}}</td></tr>
+    <tr><td>Visibilty</td><td>{{weather.visibility/1000}} km </td></tr>
+    <tr>
+      <td>Geo Coords</td>
+      <td>
+        <a routerLink="map">
+          [
+          <span id="wrong-data-lat">{{ weather.coord.lat }} </span>,&nbsp;<span id="wrong-data-lon">{{ weather.coord.lon }}</span>]
+        </a>
+      </td>
+    </tr>
+    </tbody>
+    </table>
+</div>

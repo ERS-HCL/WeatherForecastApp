@@ -1,0 +1,14 @@
+<div class="row">
+  <h3>  Chart weather and forecasts in {{title}}</h3>
+  <div>
+    <form>
+      <ul class="nav nav-tabs">
+        <li routerLinkActive="active"><a routerLink="temperature">Temperature</a></li>
+        <li routerLinkActive="active"><a routerLink="wind">Wind</a></li>
+        <li routerLinkActive="active"><a routerLink="pressure">Pressure</a></li>
+        <!--<li routerLinkActive="active"><a routerLink="precipitation">Precipitation</a></li>-->
+      </ul>
+    </form>
+  </div>
+</div>
+<router-outlet></router-outlet>
