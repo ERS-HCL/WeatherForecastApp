@@ -27,7 +27,7 @@ Download the project and install the required packages and run the application.
 
 ```
 ## Add appid to connect openweather map rest api
-Modify the environment file and your appid
+Create your appid on http://api.openweathermap.org and modify the environment file and your appid
 
 ![Image](/images/app_id.PNG)
 	
